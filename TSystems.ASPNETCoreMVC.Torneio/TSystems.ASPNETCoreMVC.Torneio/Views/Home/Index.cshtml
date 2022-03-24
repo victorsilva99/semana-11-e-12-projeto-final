@@ -1,8 +1,11 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="index">
+        <img src="~/img/pngs/league-of-legends-logo.png" class="img_logo"/>
+        <video autoplay loop class="bg_video img-thumbnail">
+            <source src="~/medias/index-video-2.webm" type="video/webm">
+            <source src="~/medias/index-video-1.mp4" type="video/mp4">
+        </video>
+        <button type="button" onclick="location.href='@Url.Action("Champions")'" class="custom-btn btn-3"><span>Começar</span></button>
 </div>

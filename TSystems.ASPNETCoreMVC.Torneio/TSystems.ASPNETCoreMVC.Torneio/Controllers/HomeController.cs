@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
+
 using TSystems.ASPNETCoreMVC.Torneio.Models;
 
 namespace TSystems.ASPNETCoreMVC.Torneio.Controllers
@@ -23,7 +20,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Champions()
         {
             return View();
         }
