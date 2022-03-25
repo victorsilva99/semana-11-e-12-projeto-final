@@ -10,6 +10,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using TSystems.ASPNETCoreMVC.Torneio.Context;
+using TSystems.ASPNETCoreMVC.Torneio.Repositories;
+using TSystems.ASPNETCoreMVC.Torneio.Repositories.Interfaces;
 
 namespace TSystems.ASPNETCoreMVC.Torneio
 {
@@ -27,6 +29,10 @@ namespace TSystems.ASPNETCoreMVC.Torneio
         {
             services.AddDbContext<AppDbContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<IChampionsRepository, ChampionsRepository>();
+
+
             services.AddControllersWithViews();
         }
 
