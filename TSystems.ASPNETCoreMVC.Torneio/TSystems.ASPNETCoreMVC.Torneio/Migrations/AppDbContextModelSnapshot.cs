@@ -18,7 +18,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Migrations
                 .HasAnnotation("ProductVersion", "5.0.15")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("TSystems.ASPNETCoreMVC.Torneio.Models.ChampionsModel", b =>
+            modelBuilder.Entity("TSystems.ASPNETCoreMVC.Torneio.Models.ChampionModel", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Champions");
+                    b.ToTable("Champion");
                 });
 #pragma warning restore 612, 618
         }

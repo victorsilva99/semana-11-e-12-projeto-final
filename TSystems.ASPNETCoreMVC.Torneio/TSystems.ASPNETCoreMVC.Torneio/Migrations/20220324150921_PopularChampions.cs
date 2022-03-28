@@ -6,7 +6,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Migrations
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.Sql("INSERT INTO Champions(Nome, Idade, Habilidades, TotalDeLutas, Vitorias, Derrotas)" +
+            migrationBuilder.Sql("INSERT INTO Champion(Nome, Idade, Habilidades, TotalDeLutas, Vitorias, Derrotas)" +
              "VALUES ('Ashe', 21, 4, 0, 0, 0)," +
                     "('Azir', 39, 4, 0, 0, 0)," +
                     "('Ezreal', 21, 4, 0, 0, 0)," +

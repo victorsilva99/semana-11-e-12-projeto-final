@@ -3,7 +3,7 @@
 
 namespace TSystems.ASPNETCoreMVC.Torneio.Models
 {
-    public class ChampionsModel
+    public class ChampionModel
     {
         [Key]
         public int Id { get; set; }
@@ -13,5 +13,10 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Models
         public int TotalDeLutas { get; set; }
         public int Vitorias { get; set; }
         public int Derrotas { get; set; }
+
+        public string GetPath()
+        {
+            return @"../img/champions/" + Nome + ".png";
+        }
     }
 }

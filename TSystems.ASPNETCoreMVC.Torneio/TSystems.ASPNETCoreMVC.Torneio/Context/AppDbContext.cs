@@ -10,6 +10,6 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Context
 
         }
 
-        public DbSet<ChampionsModel> Champions { get; set; }
+        public DbSet<ChampionModel> Champion { get; set; }
     }
 }
