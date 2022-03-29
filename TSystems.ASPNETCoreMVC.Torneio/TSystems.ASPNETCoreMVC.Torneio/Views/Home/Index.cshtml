@@ -4,11 +4,19 @@
 
 <link rel="stylesheet" href="~/css/pages/index.css" />
 
-<div class="index">
-        <img src="~/img/pngs/league-of-legends-logo.png" class="img_logo"/>
-        <video autoplay loop class="bg_video img-thumbnail">
+<div class="container">
+    <div class="bg_video">
+        <video autoplay loop class="bg_video">
             <source src="~/medias/index-video-2.webm" type="video/webm">
             <source src="~/medias/index-video-1.mp4" type="video/mp4">
         </video>
+    </div>
+    <div class="logo">
+        <div>
+            <img src="~/img/pngs/league-of-legends-logo.png" style="width:100%" class="imagem"/>
+        </div>
+    </div>
+    <div class="botao">
         <button type="button" onclick="location.href='@Url.Action("List", "Champion")'" class="custom-btn btn-3"><span>Começar</span></button>
+    </div>
 </div>

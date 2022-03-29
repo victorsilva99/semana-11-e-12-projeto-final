@@ -6,94 +6,39 @@
 <link rel="stylesheet" href="~/css/pages/index.css" />
 <link rel="stylesheet" href="~/css/pages/champion.css" />
 
-@*<h1>List</h1>
-
-    <p>
-        <a asp-action="Create">Create New</a>
-    </p>
-    <table class="table">
-        <thead>
-            <tr>
-                <th>
-                    @Html.DisplayNameFor(model => model.Nome)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Idade)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Habilidades)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.TotalDeLutas)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Vitorias)
-                </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.Derrotas)
-                </th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-    @foreach (var item in Model) {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Nome)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Idade)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Habilidades)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.TotalDeLutas)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Vitorias)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Derrotas)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-                </td>
-            </tr>
-    }
-        </tbody>
-    </table>*@
-
-
-<div class="centralizado">
+<div>
     <h1> Draft </h1>
-    <h3> Selecione 16 campeões para começar!</h3>
+    <h5> Selecione 16 campeões para começar!</h5>
 </div>
 
-<div class="container row">
+<div class="container row centralizado">
     @foreach (var champion in Model)
     {
-        <div>
+        <div class="cards">
             <img src="@champion.GetPath()" alt="Alternate Text" />
-
-            <div class="centralizado">
-                <h2>@champion.Nome</h2>
+            <div class="nome">
+                <h4>@champion.Nome</h4>
             </div>
-
-            <div class="centralizado">
-                <input type="checkbox" />
+            <div>
+                <input type="checkbox" @*class="redondo"*@ />
             </div>
-
-            <div class="centralizado">
-                <p>Skills: @champion.Habilidades </p>
-                <p>Fights: @champion.TotalDeLutas </p>
-            </div>
-
-            <div class="centralizado">
-                <p> Victories: @champion.Vitorias </p>
-                <p> Defeats: @champion.Derrotas </p>
+            <div class="informacoes">
+                <div class="row">
+                    <div class="col-sm pr-0 pl-4">
+                        <p>Skills: @champion.Habilidades </p>
+                    </div>
+                    <div class="col-sm">
+                        <p>Fights: @champion.TotalDeLutas </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm pr-0 pl-4">
+                        <p> Victories: @champion.Vitorias </p>
+                    </div>
+                    <div class="col-sm">
+                        <p> Defeats: @champion.Derrotas </p>
+                    </div>
+                </div>
             </div>
         </div>
     }

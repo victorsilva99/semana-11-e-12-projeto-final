@@ -103,12 +103,30 @@ button {
         width: 100%;
     }
 
-.index {
-    text-align: center;
+.container {
+    position: relative;
 }
-
-.img_logo {
-    position: center;
-    width: 40%;
-    z-index: 1;
+.logo {
+    position: absolute;
+    z-index: 9999;
+    width: 400px;
+    left: 365px;
+    top: 120px;
+}
+.imagem {
+    filter: drop-shadow(10px 10px 10px #222);
+}
+.bg_video{
+    position: relative;
+    z-index:-9999;
+    justify-items: center;
+    width: 1080px;
+    margin-bottom: 20px;
+}
+.botao {
+    filter: drop-shadow(5px 5px 5px #222);
+    position: absolute;
+    z-index: 9999;
+    top: 300px;
+    left: 480px;
 }
