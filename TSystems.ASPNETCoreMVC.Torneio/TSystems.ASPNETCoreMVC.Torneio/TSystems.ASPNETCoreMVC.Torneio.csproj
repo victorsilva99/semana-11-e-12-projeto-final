@@ -6,6 +6,20 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\js\pages\**" />
+    <Content Remove="wwwroot\js\pages\**" />
+    <EmbeddedResource Remove="wwwroot\js\pages\**" />
+    <None Remove="wwwroot\js\pages\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Migrations\20220329121745_Vencedor.cs" />
+    <Compile Remove="Migrations\20220329121745_Vencedor.Designer.cs" />
+    <Compile Remove="Models\CampeaoModel.cs" />
+    <Compile Remove="Repositories\Interfaces\IVencedorRepository.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
 	<Folder Include="wwwroot\img\" />
   </ItemGroup>
 

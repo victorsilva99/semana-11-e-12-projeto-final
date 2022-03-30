@@ -7,12 +7,28 @@
     font-family: 'Cairo';
     src: url('../fonts/Cairo-Light.tff') format('truetype');
 }
-/*Padrões*/
-.centralizado {
-    justify-content: center;
-    margin: 0px !important;
-    display: flex;
+/*Cards*/
+.cards {
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    filter: grayscale(100%);
 }
+
+    .cards:hover {
+        transform: scale(1.05, 1.05);
+        filter: drop-shadow(5px 5px 5px #29a6f8);
+        transition: 0.5s;
+    }  
+
+
+.botao_iniciar {
+    filter: drop-shadow(5px 5px 5px #222);
+    position: relative;
+    z-index: 9999;
+}
+/*Padrões*/
 
 .row {
     margin: 0px !important;

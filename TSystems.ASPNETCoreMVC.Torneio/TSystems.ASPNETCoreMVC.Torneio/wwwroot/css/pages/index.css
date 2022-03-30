@@ -1,4 +1,5 @@
-﻿@font-face {
+
+@font-face {
     font-family: 'FF Mark';
     src: url('../fonts/FontFont_FF.Mark.Pro.Heavy.otf') format('opentype');
 }
@@ -8,6 +9,38 @@
     src: url('../fonts/Cairo-Medium.ttf') format('truetype');
 }
 
+.centralizado {
+    justify-content: center;
+    margin: 0px !important;
+    display: flex;
+    width: 100%;
+}
+/*-----Video Background-------*/
+.div-video {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px !important;
+}
+.bg-video {
+    width: 100%;
+}
+/*------Imagem Logo-----------*/
+.div-img{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+}
+.logo-img {
+    width: 100%;
+    max-width: 400px;
+}
+/*------Botão Começar-----------*/
+.div-btn {
+    top: 300px;
+    position: absolute;
+    width: 100%;
+}
+/*-------- Estilo do botão-------*/
 button {
     margin: 20px;
     outline: none;
@@ -37,7 +70,7 @@ button {
     .btn-3:hover {
         background: transparent;
         color: #fff;
-        box-shadow: 0 0 10px #0366d6, 0 0 5px #1bdcdc;
+        filter: drop-shadow();
     }
 
     .btn-3 span {
@@ -102,31 +135,3 @@ button {
     .btn-3 span:hover:after {
         width: 100%;
     }
-
-.container {
-    position: relative;
-}
-.logo {
-    position: absolute;
-    z-index: 9999;
-    width: 400px;
-    left: 365px;
-    top: 120px;
-}
-.imagem {
-    filter: drop-shadow(10px 10px 10px #222);
-}
-.bg_video{
-    position: relative;
-    z-index:-9999;
-    justify-items: center;
-    width: 1080px;
-    margin-bottom: 20px;
-}
-.botao {
-    filter: drop-shadow(5px 5px 5px #222);
-    position: absolute;
-    z-index: 9999;
-    top: 300px;
-    left: 480px;
-}
