@@ -7,21 +7,21 @@
 <section>
     <div class="container-fluid">
         <div class="div-video centralizado">
+            <video autoplay loop class="bg-video">
+                <source src="~/medias/videos/index-video-2.webm" type="video/webm">
+                <source src="~/medias/videos/index-video-1.mp4" type="video/mp4">
+            </video>
             <div class="div-img centralizado">
-                <img src="~/img/pngs/league-of-legends-logo.png" class="logo-img" />
+                <img src="~/img/pngs/league-of-legends-logo.png" class="logo-img"/>
             </div>
             <div class="div-btn centralizado">
-                <button type="button" onclick="location.href='@Url.Action("List", "Champion")'" class="custom-btn btn-3">
+                <button type="button" onclick="location.href='@Url.Action("Champions", "Torneio")'" class="custom-btn btn-3">
                     <span>
                         Começar
                     </span>
                 </button>
             </div>
-            <video autoplay loop class="bg-video">
-                <source src="~/medias/index-video-2.webm" type="video/webm">
-                <source src="~/medias/index-video-1.mp4" type="video/mp4">
-            </video>
-
         </div>
+
     </div>
 </section>

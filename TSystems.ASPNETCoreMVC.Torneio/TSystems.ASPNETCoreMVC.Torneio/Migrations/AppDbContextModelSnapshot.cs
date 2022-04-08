@@ -51,28 +51,28 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Migrations
 
             modelBuilder.Entity("TSystems.ASPNETCoreMVC.Torneio.Models.VencedorModel", b =>
                 {
-                    b.Property<int>("VencedorId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("ChampionId")
+                    b.Property<int?>("ChampionVencedorId")
                         .HasColumnType("int");
 
-                    b.HasKey("VencedorId");
+                    b.HasKey("Id");
 
-                    b.HasIndex("ChampionId");
+                    b.HasIndex("ChampionVencedorId");
 
-                    b.ToTable("Vencedor");
+                    b.ToTable("VencedorModel");
                 });
 
             modelBuilder.Entity("TSystems.ASPNETCoreMVC.Torneio.Models.VencedorModel", b =>
                 {
-                    b.HasOne("TSystems.ASPNETCoreMVC.Torneio.Models.ChampionModel", "Champion")
+                    b.HasOne("TSystems.ASPNETCoreMVC.Torneio.Models.ChampionModel", "ChampionVencedor")
                         .WithMany()
-                        .HasForeignKey("ChampionId");
+                        .HasForeignKey("ChampionVencedorId");
 
-                    b.Navigation("Champion");
+                    b.Navigation("ChampionVencedor");
                 });
 #pragma warning restore 612, 618
         }

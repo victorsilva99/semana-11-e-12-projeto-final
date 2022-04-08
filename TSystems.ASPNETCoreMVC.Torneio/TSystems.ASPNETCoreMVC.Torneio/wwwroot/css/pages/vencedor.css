@@ -1,0 +1,11 @@
+﻿body {
+    background-image: url(../../img/backgrouds/background-winner.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.cards {
+    transform: scale(1.05, 1.05) !important;
+    filter: drop-shadow(5px 5px 5px #29a6f8) !important;
+    cursor: default !important;
+}

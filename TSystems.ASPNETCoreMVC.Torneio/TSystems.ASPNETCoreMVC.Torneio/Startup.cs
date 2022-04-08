@@ -29,7 +29,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio
         {
             services.AddRazorPages().AddRazorRuntimeCompilation();
             services.AddDbContext<AppDbContext>(options =>
-            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            options.UseSqlServer(Configuration.GetConnectionString("minhaconexao")));
 
             services.AddTransient<IChampionRepository, ChampionRepository>();
 
@@ -61,7 +61,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Torneio}/{action=Champions}/{id?}");
             });
         }
     }

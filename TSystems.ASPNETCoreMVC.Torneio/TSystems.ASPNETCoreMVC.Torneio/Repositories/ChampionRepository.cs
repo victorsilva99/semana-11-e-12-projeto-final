@@ -11,6 +11,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Repositories
     public class ChampionRepository : IChampionRepository
     {
         private readonly AppDbContext _context;
+
         public ChampionRepository(AppDbContext contexto)
         {
             _context = contexto;

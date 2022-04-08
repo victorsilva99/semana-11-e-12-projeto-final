@@ -1,11 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
-
+using System.Runtime.Serialization;
 
 namespace TSystems.ASPNETCoreMVC.Torneio.Models
 {
     public class ChampionModel
     {
-        [Key]
+        [DataMember]
         public int Id { get; set; }
         public string Nome { get; set; }
         public int Idade { get; set; }
@@ -13,10 +13,5 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Models
         public int TotalDeLutas { get; set; }
         public int Vitorias { get; set; }
         public int Derrotas { get; set; }
-
-        public string GetPath()
-        {
-            return @"../img/champions/" + Nome + ".png";
-        }
     }
 }

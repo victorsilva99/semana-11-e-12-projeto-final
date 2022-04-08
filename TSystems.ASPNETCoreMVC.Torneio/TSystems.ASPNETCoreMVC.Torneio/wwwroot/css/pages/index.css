@@ -1,18 +1,13 @@
-
-@font-face {
-    font-family: 'FF Mark';
-    src: url('../fonts/FontFont_FF.Mark.Pro.Heavy.otf') format('opentype');
-}
-
-@font-face {
-    font-family: 'Cairo';
-    src: url('../fonts/Cairo-Medium.ttf') format('truetype');
+body {
+    background-image: url(../../img/backgrouds/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .centralizado {
-    justify-content: center;
-    margin: 0px !important;
     display: flex;
+    justify-content: center;
     width: 100%;
 }
 /*-----Video Background-------*/
@@ -20,6 +15,7 @@
     position: relative;
     width: 100%;
     margin-bottom: 40px !important;
+    display: block;
 }
 .bg-video {
     width: 100%;
@@ -27,8 +23,7 @@
 /*------Imagem Logo-----------*/
 .div-img{
     position: absolute;
-    width: 100%;
-    top: 120px;
+    top: 130px;
 }
 .logo-img {
     width: 100%;
@@ -36,9 +31,8 @@
 }
 /*------Botão Começar-----------*/
 .div-btn {
-    top: 300px;
     position: absolute;
-    width: 100%;
+    top: 300px;
 }
 /*-------- Estilo do botão-------*/
 button {
