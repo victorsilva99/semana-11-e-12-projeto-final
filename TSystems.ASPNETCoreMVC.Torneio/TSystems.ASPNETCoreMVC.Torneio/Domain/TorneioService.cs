@@ -12,7 +12,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Domain
         void CriarLista(string ids)
         {
             Repository repositorio = new Repository();
-            _torneio = repositorio.CriarLista(ids);
+            _torneio = repositorio.BuscarChampion(ids);
         }
         
         double porcentagemVitoria(List<ChampionModel> champion, int indice)
@@ -74,7 +74,6 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Domain
                 {
                     RealizarCombates(_torneio, i);
                 }
-
                 if (_torneio.Count > 4)
                 {
                     OrdenarPorIdade(_torneio);

@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using TSystems.ASPNETCoreMVC.Torneio.Domain;
+using TSystems.ASPNETCoreMVC.Torneio.Models;
 using TSystems.ASPNETCoreMVC.Torneio.Repositories.Interfaces;
+using TSystems.ASPNETCoreMVC.Torneio.DAO;
+using System.Web.Http.Routing;
 
 namespace TSystems.ASPNETCoreMVC.Torneio.Controllers
 {
@@ -19,11 +22,20 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Controllers
             return View(champions);
         }
 
-        public IActionResult Vencedor([FromBody] string ids)
+        [Route("Torneio/Vencedor/{championId}")]
+        public IActionResult Vencedor(string championId)
+        {
+            var repository = new Repository();
+            var vencedor = repository.BuscarChampion(championId)[0];
+            return View(vencedor);
+        }
+
+        public JsonResult MataMata([FromBody] string ids)
         {
             var inicioTorneio = new TorneioService();
+            var vencedor = inicioTorneio.ComeçarTorneio(ids)[0].Id;
 
-            return View("Vencedor", inicioTorneio.ComeçarTorneio(ids));
+            return Json(new { url = $"Torneio/Vencedor/{vencedor}" });
         }
     }
 }

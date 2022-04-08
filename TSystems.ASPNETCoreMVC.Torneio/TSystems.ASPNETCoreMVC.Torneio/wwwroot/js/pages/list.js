@@ -4,31 +4,17 @@ var audioBackground = new Audio('/medias/audios/background-sound.mp3');
 var selecionados = new Array();
 
 
+
 function iniciar() {
-    var restantes = 16 - selecionados.length;
-
-    if (selecionados.length == 16) {
-        passarSelecionados();
-    }
-    else {
-        if (restantes.length < 16) {
-            alert('Ainda faltam selecionar ' + restantes + " campeões!");
-        }
-        else {
-            alert('Ainda falta selecionar ' + restantes + " campeão!");
-        }
-    }
-}
-function passarSelecionados() {
     var ids = JSON.stringify(selecionados.toString());
-
     return $.ajax({
         type: 'POST',
-        url: "Torneio/Vencedor",
+        url: "Torneio/MataMata",
         contentType: 'application/json',
         data: ids,
         success: function (data) {
             window.location = data.url;
+            console.log(url);
         }
     });
 }

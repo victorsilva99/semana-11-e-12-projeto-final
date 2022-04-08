@@ -9,7 +9,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.DAO
 {
     public class Repository
     {
-        public List<ChampionModel> CriarLista(string ids)
+        public List<ChampionModel> BuscarChampion(string ids)
         {
             string sql = $"SELECT * FROM Champion WHERE Id in ({ids}) ORDER BY Idade desc";
 
