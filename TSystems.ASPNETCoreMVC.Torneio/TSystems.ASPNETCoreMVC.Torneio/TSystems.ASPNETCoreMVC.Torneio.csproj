@@ -11,7 +11,6 @@
   </ItemGroup>
 
   <ItemGroup>
-	<Folder Include="Torneio\" />
 	<Folder Include="wwwroot\img\" />
 	<Folder Include="wwwroot\medias\videos\" />
   </ItemGroup>

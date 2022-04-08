@@ -24,7 +24,7 @@ function passarSelecionados() {
 
     return $.ajax({
         type: 'POST',
-        url: "Torneio/MataMata",
+        url: "Torneio/Vencedor",
         contentType: 'application/json',
         data: ids,
         success: function (data) {
