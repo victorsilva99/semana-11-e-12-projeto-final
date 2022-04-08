@@ -23,37 +23,10 @@ namespace TSystems.ASPNETCoreMVC.Torneio.Migrations
                 {
                     table.PrimaryKey("PK_Champion", x => x.Id);
                 });
-
-            migrationBuilder.CreateTable(
-                name: "VencedorModel",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    ChampionVencedorId = table.Column<int>(type: "int", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_VencedorModel", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_VencedorModel_Champion_ChampionVencedorId",
-                        column: x => x.ChampionVencedorId,
-                        principalTable: "Champion",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_VencedorModel_ChampionVencedorId",
-                table: "VencedorModel",
-                column: "ChampionVencedorId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.DropTable(
-                name: "VencedorModel");
-
             migrationBuilder.DropTable(
                 name: "Champion");
         }
