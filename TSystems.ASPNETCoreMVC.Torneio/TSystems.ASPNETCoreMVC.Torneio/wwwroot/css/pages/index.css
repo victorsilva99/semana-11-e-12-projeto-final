@@ -1,0 +1,131 @@
+body {
+    background-image: url(../../img/backgrouds/header.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.centralizado {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+/*-----Video Background-------*/
+.div-video {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px !important;
+    display: block;
+}
+.bg-video {
+    width: 100%;
+}
+/*------Imagem Logo-----------*/
+.div-img{
+    position: absolute;
+    top: 130px;
+}
+.logo-img {
+    width: 100%;
+    max-width: 400px;
+}
+/*------Botão Começar-----------*/
+.div-btn {
+    position: absolute;
+    top: 300px;
+}
+/*-------- Estilo do botão-------*/
+button {
+    margin: 20px;
+    outline: none;
+}
+
+.custom-btn {
+    width: 130px;
+    height: 40px;
+    padding: 10px 25px;
+    border: 2px solid #0366d6;
+    font-family: 'Cairo';
+    font-weight: 500;
+    background: #29a6f8;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: static;
+    display: inline-block;
+    z-index: 1;
+}
+
+.btn-3 {
+    line-height: 39px;
+    padding: 0;
+    z-index: 1;
+}
+
+    .btn-3:hover {
+        background: transparent;
+        color: #fff;
+        filter: drop-shadow();
+    }
+
+    .btn-3 span {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .btn-3:before,
+    .btn-3:after {
+        position: relative;
+        content: "";
+        left: 0;
+        top: 0;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .btn-3:before {
+        height: 0%;
+        width: 2px;
+    }
+
+    .btn-3:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    .btn-3:hover:before {
+        height: 100%;
+    }
+
+    .btn-3:hover:after {
+        width: 100%;
+    }
+
+    .btn-3 span:before,
+    .btn-3 span:after {
+        position: relative;
+        content: "";
+        right: 0;
+        bottom: 0;
+        background: #fff;
+        transition: all 0.3s ease;
+    }
+
+    .btn-3 span:before {
+        width: 2px;
+        height: 0%;
+    }
+
+    .btn-3 span:after {
+        width: 0%;
+        height: 2px;
+    }
+
+    .btn-3 span:hover:before {
+        height: 100%;
+    }
+
+    .btn-3 span:hover:after {
+        width: 100%;
+    }
