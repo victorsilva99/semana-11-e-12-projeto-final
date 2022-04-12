@@ -3,7 +3,7 @@ using TSystems.ASPNETCoreMVC.Torneio.Domain;
 using TSystems.ASPNETCoreMVC.Torneio.Models;
 using TSystems.ASPNETCoreMVC.Torneio.Repositories.Interfaces;
 using TSystems.ASPNETCoreMVC.Torneio.DAO;
-using System.Web.Http.Routing;
+
 
 namespace TSystems.ASPNETCoreMVC.Torneio.Controllers
 {

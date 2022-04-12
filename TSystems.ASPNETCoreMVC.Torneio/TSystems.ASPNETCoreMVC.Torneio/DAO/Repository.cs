@@ -11,7 +11,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.DAO
     {
         public List<ChampionModel> BuscarChampion(string ids)
         {
-            string sql = $"SELECT * FROM Champion WHERE Id in ({ids}) ORDER BY Idade desc";
+            string sql = $"SELECT Id, Nome, Idade, Habilidades, TotalDeLutas, Vitorias, Derrotas FROM Champion WHERE Id in ({ids}) ORDER BY Idade desc";
 
             return HelperDAO.ExecutaSQL(sql);
         }
