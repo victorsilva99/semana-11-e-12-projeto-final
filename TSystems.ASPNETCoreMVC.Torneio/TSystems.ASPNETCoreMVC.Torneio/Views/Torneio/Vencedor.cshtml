@@ -1,4 +1,4 @@
-﻿@model ChampionModel;
+﻿@model List<ChampionModel>;
 
 @{
     ViewData["Title"] = "Champions";
@@ -24,26 +24,26 @@
     <div class="container-fluid row centralizado">
         <div class="cards">
             <div class="card_img">
-                <img src="~/img/champions/@(Model.Nome).png" alt="Card do Champion" />
+                <img src="~/img/champions/@(Model[0].Nome).png" alt="Card do Champion" />
             </div>
             <div class="nome">
-                <h4>@Model.Nome</h4>
+                <h4>@Model[0].Nome</h4>
             </div>
             <div class="informacoes">
                 <div class="row">
                     <div class="col-auto pr-0 pl-4">
-                        <p>Skills: @Model.Habilidades </p>
+                        <p>Skills: @Model[0].Habilidades </p>
                     </div>
                     <div class="col-auto">
-                        <p>Fights: @Model.TotalDeLutas </p>
+                        <p>Fights: @Model[0].TotalDeLutas </p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-auto pr-0 pl-4">
-                        <p> Victories: @Model.Vitorias </p>
+                        <p> Victories: @Model[0].Vitorias </p>
                     </div>
                     <div class="col-auto">
-                        <p> Defeats: @Model.Derrotas </p>
+                        <p> Defeats: @Model[0].Derrotas </p>
                     </div>
                 </div>
             </div>
