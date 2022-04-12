@@ -1,15 +1,22 @@
-﻿var audioClick = new Audio('/medias/audios/champion-select.mp3');
-var audioBackground = new Audio('/medias/audios/background-sound.mp3');
-
-var selecionados = new Array();
-
-
+﻿var selecionados = new Array();
+var restantes = 16;
 
 function iniciar() {
+    if (restantes == 0) {
+        enviarSelecionados();
+    }
+    else if (restantes == 1) {
+        alert('Ainda falta selecionar 1 campeão!');
+    } else {
+        alert('Ainda falta selecionar '+ restantes + ' campeões!');
+    }
+}
+
+function enviarSelecionados() {
     var ids = JSON.stringify(selecionados.toString());
     return $.ajax({
         type: 'POST',
-        url: "Torneio/MataMata",
+        url: "/Torneio/MataMata",
         contentType: 'application/json',
         data: ids,
         success: function (data) {
@@ -17,11 +24,6 @@ function iniciar() {
             console.log(url);
         }
     });
-}
-
-function diminuirVolume() {
-    audioBackground.volume = 0.1;
-    audioClick.volume = 0.1;
 }
 
 function selecionar(id) {
@@ -45,13 +47,13 @@ function selecionar(id) {
 function adicionarListaSelecionados(id) {
     if (selecionados.indexOf(id) == -1) {
         selecionados.push(id);
+        restantes -= 1;
     }
-    console.log(selecionados);
 }
 
 function deletarListaSelecionados(id) {
     if (selecionados.indexOf(id) != -1) {
         selecionados.splice(selecionados.indexOf(id), 1);
+        restantes += 1;
     }
-    console.log(selecionados);
 }
