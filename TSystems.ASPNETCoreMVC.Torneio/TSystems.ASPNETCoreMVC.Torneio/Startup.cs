@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -8,6 +9,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TSystems.ASPNETCoreMVC.Torneio.Context;
+using TSystems.ASPNETCoreMVC.Torneio.Repositories;
+using TSystems.ASPNETCoreMVC.Torneio.Repositories.Interfaces;
 
 namespace TSystems.ASPNETCoreMVC.Torneio
 {
@@ -23,6 +27,12 @@ namespace TSystems.ASPNETCoreMVC.Torneio
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddRazorPages().AddRazorRuntimeCompilation();
+            services.AddDbContext<AppDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddTransient<IChampionRepository, ChampionRepository>();
+
             services.AddControllersWithViews();
         }
 
@@ -32,6 +42,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+                app.UseBrowserLink();
             }
             else
             {
@@ -41,7 +52,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            
             app.UseRouting();
 
             app.UseAuthorization();

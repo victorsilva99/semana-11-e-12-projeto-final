@@ -1,0 +1,54 @@
+﻿@model List<ChampionModel>;
+
+@{
+    ViewData["Title"] = "Champions";
+}
+
+<link rel="stylesheet" href="~/css/pages/index.css" />
+<link rel="stylesheet" href="~/css/pages/champion.css" />
+<link rel="stylesheet" href="~/css/pages/vencedor.css" />
+
+<header>
+    <h1>
+        Vencedor
+    </h1>
+    <div class="botao_iniciar centralizado">
+        <button class="custom-btn btn-3" type="button" onclick="location.href='@Url.Action("Index", "Home")'">
+            <span>
+                Voltar
+            </span>
+        </button>
+    </div>
+</header>
+<section>
+    <div class="container-fluid row centralizado">
+        <div class="cards">
+            <div class="card_img">
+                <img src="~/img/champions/@(Model[0].Nome).png" alt="Card do Champion" />
+            </div>
+            <div class="nome">
+                <h4>@Model[0].Nome</h4>
+            </div>
+            <div class="informacoes">
+                <div class="row">
+                    <div class="col-auto pr-0 pl-4">
+                        <p>Skills: @Model[0].Habilidades </p>
+                    </div>
+                    <div class="col-auto">
+                        <p>Fights: @Model[0].TotalDeLutas </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-auto pr-0 pl-4">
+                        <p> Victories: @Model[0].Vitorias </p>
+                    </div>
+                    <div class="col-auto">
+                        <p> Defeats: @Model[0].Derrotas </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
