@@ -10,7 +10,7 @@ namespace TSystems.ASPNETCoreMVC.Torneio.DAO
     {
         public static SqlConnection GetConexao()
         {
-            string conectionString = (@"Data Source = CTS1A519954\SQLEXPRESS; Initial Catalog = db_ProjetoFinal; Integrated Security = True");
+            string conectionString = (@"Data Source=(LocalDB)\MSSQLLocalDB;Initial Catalog = db_ProjetoFinal;Integrated Security=True");
             SqlConnection iniciarConexao = new SqlConnection(conectionString);
             iniciarConexao.Open();
             return iniciarConexao;
